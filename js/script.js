@@ -201,10 +201,3 @@ function startAudioOnce() {
 }
 
 window.addEventListener('click', startAudioOnce);
-
-
-const playlist = [
-  {name:'Legends', cover:'images/cover1.jpg', file:'music/I think.mp3'},
-  {name:'All Girls Are The Same', cover:'images/cover2.jpg', file:'music/ she’s.mp3'},
-  {name:'Lovers Rock', cover:'images/cover3.jpg', file:'music/Really special.mp3'}
-];
