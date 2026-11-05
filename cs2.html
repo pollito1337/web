@@ -1,244 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pollito</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link rel="stylesheet" href="css/style.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f0d0e">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<title>Config de CS2 · Pollito</title>
+<meta name="description" content="Mi sensibilidad, resolución y ajustes de CS2, con descarga de la config.">
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">Pollito</a>
+  <a class="btn" href="index.html">Volver al inicio</a>
+</div></header>
 
-  <header class="nav">
-    <div class="nav-inner">
-      <div class="brand">pollito</div>
-      <nav>
-        <a href="#about">about me</a>
-        <a href="#setup">Setup</a>
-        <a href="#content">content</a>
-        <a href="#projects">projects</a>
-        <a href="#contact">contact</a>
-      </nav>
-      <a href="index.html" target="_blank" id="cta-join" class="btn-outline">
-        Go back
-      </a>
+<main id="main">
+<div class="page-head"><div class="wrap">
+  <h1>Mi config de CS2</h1>
+  <p>Llevo 3 años jugando a Counter-Strike, aunque en otras cuentas. Empecé por diversión y hace un año empecé a tomármelo en serio.</p>
+  <div class="actions">
+    <a class="btn gold" href="download/config.7z" download><i class="fas fa-download"></i> Descargar config (.7z)</a>
+    <button class="btn" id="copy"><i class="far fa-copy"></i> <span>Copiar comandos</span></button>
+  </div>
+</div></div>
+
+<section class="alt"><div class="wrap">
+  <h2>Ajustes</h2>
+  <dl class="specs">
+    <dt>Sensibilidad</dt><dd>0.525<span>DPI 1600 · eDPI 891</span></dd>
+    <dt>Zoom</dt><dd>1.00</dd>
+    <dt>Sensibilidad de Windows</dt><dd>6/11</dd>
+    <dt>Polling rate</dt><dd>2000 Hz</dd>
+    <dt>Resolución</dt><dd>1280×960<span>4:3</span></dd>
+    <dt>Modo</dt><dd>Pantalla completa</dd>
+  </dl>
+</div></section>
+
+<section><div class="wrap">
+  <h2>En consola</h2>
+<pre id="cmds">sensitivity "0.525"
+zoom_sensitivity_ratio_mouse "1.0"</pre>
+</div></section>
+<section class="alt"><div class="wrap">
+  <h2>Calculadora de sensibilidad</h2>
+  <div class="tool">
+    <div class="fields">
+      <label>Sensibilidad<input id="c-sens" type="number" step="0.001" value="0.557"></label>
+      <label>DPI<input id="c-dpi" type="number" step="50" value="1600"></label>
     </div>
-  </header>
+    <dl class="specs"><dt>eDPI</dt><dd id="r-edpi"></dd><dt>cm por 360°</dt><dd id="r-cm"></dd><dt>Valorant (mismo cm/360)</dt><dd id="r-val"></dd></dl>
+  </div>
+</div></section>
 
-  <section class="hero" id="home" aria-label="Hero">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <h1 class="hero-title">I’m <span>Pollito</span></h1>
-        <p class="hero-sub">Content creator & gamer · Canary Islands · Clips, streams and configs</p>
+<section class="alt"><div class="wrap">
+  <h2>Mi crosshair</h2>
+  <pre id="mycode">CS8TWmfeJd5eisDnDua6LNqedWUokYnGnfDAFZCHGF4vyj</pre>
+  <div class="actions" style="margin-top:14px"><button class="btn gold" id="copycode"><i class="far fa-copy"></i> <span>Copiar código</span></button></div>
+  <p class="mute" style="font-size:15px;margin-top:14px">En el juego: Ajustes, pestaña Crosshair/Scopes, Share o Import, y pega el código.</p>
+</div></section>
 
-        <div class="hero-actions">
-          <a href="#content" class="btn-solid">watch content</a>
-          <a href="#projects" class="btn-link">my projects</a>
-        </div>
-
-        <div class="hero-stats">
-          <div><strong>16</strong><span>years</span></div>
-          <div><strong>CS2 / Valorant</strong><span>competition</span></div>
-          <div><strong>Canarias</strong><span>location</span></div>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="portrait-wrap">
-          <img src="images/perfil.jpg" alt="Foto de Pollito" class="portrait">
-          <div class="portrait-ring"></div>
-        </div>
-        <div class="mini-player">
-          <img src="images/default-cover.jpg" alt="cover" id="mini-cover" class="mini-cover">
-          <div class="mini-meta">
-            <div id="mini-title">Legends</div>
-            <div class="mini-controls">
-              <button id="mini-prev"><i class="fas fa-backward"></i></button>
-              <button id="mini-play"><i class="fas fa-play"></i></button>
-              <button id="mini-next"><i class="fas fa-forward"></i></button>
-              <audio id="audio-player"></audio>
-            </div>
-          </div>
-        </div>
-      </div>
+<section><div class="wrap">
+  <h2>Generador de crosshair<small>Actualizado al sistema de píxeles que Valve lanzó en septiembre de 2026.</small></h2>
+  <div class="tool">
+    <div class="fields">
+      <label>Longitud (px) <output id="o-len"></output><input id="x-len" type="range" min="0" max="20" step="1" value="7"></label>
+      <label>Grosor (px) <output id="o-th"></output><input id="x-th" type="range" min="0" max="6" step="1" value="2"></label>
+      <label>Hueco (px) <output id="o-gap"></output><input id="x-gap" type="range" min="0" max="12" step="1" value="4"></label>
+      <label>Opacidad <output id="o-a"></output><input id="x-a" type="range" min="0" max="255" step="5" value="255"></label>
+      <label>Color<input id="x-color" type="color" value="#00ff66"></label>
+      <label>Altura de pantalla
+        <select id="x-h"><option>720</option><option>768</option><option>900</option><option selected>960</option><option>1080</option><option>1440</option><option>2160</option></select></label>
+      <label class="chk"><input id="x-out" type="checkbox" checked> Contorno negro</label>
+      <label class="chk"><input id="x-dot" type="checkbox"> Punto central</label>
+      <label class="chk"><input id="x-t" type="checkbox"> Estilo T (sin línea superior)</label>
     </div>
-
-    <svg class="hero-divider" width="100%" height="60" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,20 C20,0 80,0 100,20 L100,100 L0,100 Z" fill="#fff"></path>
-    </svg>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-grid about-grid">
-        <div class="about-card">
-          <h2>Sobre mí</h2>
-          <p>I’m Aitor — known as <strong>Pollito</strong>. I played Counter-Strike for 3 years, but on different accounts. I started playing for fun, but I began to take it seriously a year ago.</p>
-          <ul class="about-list">
-            <li><i class="fas fa-gamepad"></i> competitive player (CS2 / Valorant)</li>
-            <li><i class="fas fa-video"></i> Streamer</li>
-            <li><i class="fas fa-cogs"></i> Configs</li>
-          </ul>
-        </div>
-
-        <div class="skills-card">
-          <h3>skills</h3>
-          <div class="skills-grid">
-            <div class="skill">video editing</div>
-            <div class="skill">Twitch streaming</div>
-            <div class="skill">game settings</div>
-            <div class="skill">Community & moderation</div>
-            <div class="skill">PC building</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="setup" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title center">My settings</h2>
-      <div class="setup-grid">
-        <div class="setup-card">
-          <div class="setup-icon">Sens</div>
-          <div class="setup-desc"><strong>0.557</strong><span>DPI 1600</span></div>
-        </div>
-        <div class="setup-card">
-          <div class="setup-icon">Zoom</div>
-          <div class="setup-desc"><strong>1.00</strong><span></span></div>
-        </div>
-        <div class="setup-card">
-          <div class="setup-icon">Win Sens</div>
-          <div class="setup-desc"><strong>6/11</strong><span></span></div>
-        </div>
-        <div class="setup-card">
-          <div class="setup-icon">HZ</div>
-          <div class="setup-desc"><strong>1000</strong><span></span></div>
-        </div>
-        <div class="setup-card">
-          <div class="setup-icon">Res</div>
-          <div class="setup-desc"><strong>1280x960</strong><span>4:3</span></div>
-        </div>
-        <div class="setup-card">
-          <div class="setup-icon">Mode</div>
-          <div class="setup-desc"><strong>FULLSCREEN</strong><span></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="content" class="section">
-    <div class="container">
-      <h2 class="section-title">Content & Social</h2>
-      <p class="muted center">Follow my platforms - there you will find streams, clips and exclusive content.</p>
-
-      <div class="social-grid">
-        <a class="social-card" href="https://youtube.com/@pollito-p7k" target="_blank">
-          <div class="icon"><i class="fab fa-youtube"></i></div>
-          <div class="meta"><strong>YouTube</strong><span></span></div>
-        </a>
-
-        <a class="social-card" href="https://twitch.tv/aitorgs10" target="_blank">
-          <div class="icon"><i class="fab fa-twitch"></i></div>
-          <div class="meta"><strong>Twitch</strong><span></span></div>
-        </a>
-
-        <a class="social-card" href="https://www.tiktok.com/@pollito99998" target="_blank">
-          <div class="icon"><i class="fab fa-tiktok"></i></div>
-          <div class="meta"><strong>TikTok</strong><span></span></div>
-        </a>
-
-        <a class="social-card" href="https://x.com/pollito1337" target="_blank">
-          <div class="icon"><i class="fab fa-x-twitter"></i></div>
-          <div class="meta"><strong>X</strong><span></span></div>
-        </a>
-
-        <a class="social-card" href="https://instagram.com/tuusuario" target="_blank">
-          <div class="icon"><i class="fab fa-instagram"></i></div>
-          <div class="meta"><strong>Instagram</strong><span></span></div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title center">featured projects</h2>
-
-      <div class="projects-grid">
-        <article class="project-card" data-title="Clip Highlight #1" data-desc="dogshit clip" data-img="images/project1.png" data-link="https://www.twitch.tv/aitorgs10/clip/ExuberantBoxyLapwingFunRun-XCbocYmGXAchrtom">
-          <img src="images/project1.png" alt="Project 1">
-          <div class="project-meta">
-            <h3>Clip Highlight #1</h3>
-            <p>Best moments & montajes</p>
-            <button class="btn-outline open-project">Ver</button>
-          </div>
-        </article>
-
-        <article class="project-card" data-title="Clip Highlight #2" data-desc="2 hs Desert Eagle" data-img="images/project2.png" data-link="https://www.twitch.tv/aitorgs10/clip/BovineModernKangarooTBCheesePull-E47AoyQ7fmG8jhPP">
-          <img src="images/project2.png" alt="Project 2">
-          <div class="project-meta">
-            <h3>Clip Highlight #2</h3>
-            <p>Best moments & montajes</p>
-            <button class="btn-outline open-project">Ver</button>
-          </div>
-        </article>
-
-        <article class="project-card" data-title="Montaje PC" data-desc="Cs2 ACE (good clip)" data-img="images/project3.png" data-link="https://www.youtube.com/watch?v=1we2a8qryic">
-          <img src="images/project3.png" alt="Project 3">
-          <div class="project-meta">
-            <h3>Clip Highlight #3</h3>
-            <p>Best moments & montajes</p>
-            <button class="btn-outline open-project">Ver</button>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-
-
-        <aside class="contact-info">
-          <h3>Social</h3>
-          <ul class="contact-list">
-            <li><i class="fab fa-youtube"></i> YouTube — <a href="https://youtube.com/@pollito-p7k" target="_blank">.­</a></li>
-            <li><i class="fab fa-twitch"></i> Twitch — <a href="https://twitch.tv/aitorgs10" target="_blank">.­</a></li>
-            <li><i class="fab fa-tiktok"></i> TikTok — <a href="https://www.tiktok.com/@pollito99998" target="_blank">­.</a></li>
-          </ul>
-
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <div id="project-modal" class="modal" aria-hidden="true">
-    <div class="modal-inner">
-      <button id="modal-close" class="modal-close"><i class="fas fa-times"></i></button>
-      <img id="modal-img" src="" alt="">
-      <div class="modal-content">
-        <h3 id="modal-title"></h3>
-        <p id="modal-desc"></p>
-        <div class="modal-actions">
-          <a id="modal-link" href="#" target="_blank" class="btn-solid">open</a>
-          <button id="modal-close2" class="btn-link">close</button>
-        </div>
-      </div>
+    <div>
+      <div class="preview" id="preview" aria-label="Vista previa aproximada del crosshair"></div>
+      <p class="mute" style="font-size:14px;margin:-6px 0 14px">Vista aproximada ampliada ×3. Los tamaños son píxeles a la altura de pantalla elegida; el juego los reescala a tu resolución.</p>
+      <pre id="xcmds"></pre>
+      <button class="btn" id="copyx" style="margin-top:12px"><i class="far fa-copy"></i> <span>Copiar crosshair</span></button>
+      <button class="btn" id="dlcfg" style="margin-top:12px"><i class="fas fa-file-arrow-down"></i> <span>Descargar autoexec.cfg</span></button>
+      <p class="mute" style="font-size:14px;margin-top:10px">El .cfg incluye tu sensibilidad de la calculadora y este crosshair. Guárdalo en la carpeta cfg del juego y ejecútalo con <code>exec autoexec</code> en la consola.</p>
+      <p class="mute" style="font-size:14px;margin-top:14px">Para compartir el tuyo exacto, en el juego usa la pestaña Crosshair/Scopes y la opción Share. Los códigos viejos que empiezan por CSGO- ya no se pueden importar.</p>
     </div>
   </div>
+</div></section>
+<section class="alt"><div class="wrap">
+  <h2>Aim trainer<small>30 segundos. Haz clic en los objetivos y no falles.</small></h2>
+  <div class="hud"><span>Tiempo <b id="a-time">30</b></span><span>Aciertos <b id="a-hits">0</b></span><span>Precisión <b id="a-acc">—</b></span><span>Reacción <b id="a-rt">—</b></span><span>Récord <b id="a-best">0</b></span></div>
+  <div id="arena" class="arena"><button class="btn gold" id="a-start">Empezar</button></div>
+</div></section>
+</main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>© 2025 Pollito</div>
-    </div>
-  </footer>
-
-  <script src="js/script.js" defer></script>
+<footer><div class="wrap"><span>© <span id="year">2026</span> Pollito</span><a href="index.html#redes">Mis redes</a></div></footer>
+<script src="js/script.js" defer></script>
 </body>
 </html>
